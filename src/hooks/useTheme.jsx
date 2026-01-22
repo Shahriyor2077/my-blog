@@ -11,7 +11,6 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  // Always use dark theme
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.add("dark");
