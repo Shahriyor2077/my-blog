@@ -246,10 +246,10 @@ const LandingPage = () => {
                             </p>
                             <p className="text-neutral-400">Technologies</p>
                         </div>
-                        {/* <div>
+                        <div>
                             <p className="text-4xl font-bold text-white mb-2">3+</p>
                             <p className="text-neutral-400">Months</p>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>
