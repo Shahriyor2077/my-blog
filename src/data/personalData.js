@@ -26,11 +26,6 @@ export const socialLinks = [
     url: "https://t.me/shahriyorjs",
     icon: "Send",
   },
-  {
-    name: "Email",
-    url: "mailto:zaripovshahriyor91@gmail.com",
-    icon: "Mail",
-  },
 ];
 
 export const skills = {
@@ -155,7 +150,7 @@ export const education = [
   {
     id: 2,
     institution: "Najot Ta'lim",
-    program: "Fullstack course",
+    program: "Bootcamp Fullstack",
     duration: "2025-2026",
     status: "In Progress",
     description:
