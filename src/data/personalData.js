@@ -60,13 +60,13 @@ export const skills = {
         { name: "Python" },
         { name: "C" },
         { name: "C++" },
-        { name: "HTML5" },
-        { name: "CSS3" },
       ],
     },
     {
       category: "Frontend",
       skills: [
+        { name: "HTML5" },
+        { name: "CSS3" },
         { name: "React.js" },
         { name: "Next.js" },
         { name: "Tailwind CSS" },
@@ -214,7 +214,7 @@ export const projects = [
     title: "Ayoqsh web",
     description: "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
     image: "/ayoqsh.png",
-    url: "https://ayoqsh-frontend.vercel.app/operator",
+    url: "https://www.nbsgazoil.uz/operator",
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
