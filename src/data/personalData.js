@@ -211,72 +211,89 @@ export const awards = [
 export const projects = [
   {
     id: 1,
+    title: "Webgrade.uz",
+    description: "Landing page for Webgrade IT company",
+    image: "/webgrade.png",
+    url: "https://www.webgrade.uz/",
+    technologies: ["React", "Typescript", "Tailwind", "Shadcn"],
+  },
+  {
+    id: 2,
     title: "Ayoqsh web",
-    description: "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
+    description:
+      "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
     image: "/ayoqsh.png",
     url: "https://www.nbsgazoil.uz/operator",
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Clinic site",
-    description: "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
+    description:
+      "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
     image: "/klinika.png",
     url: "https://orfan.uz/auth/doctor/login",
     technologies: ["Express", "JavaScript", "MongoDB", "Handlebars"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Debt web",
-    description: "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
+    description:
+      "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
     image: "/debt.png",
     url: "https://debt-market.vercel.app/login",
     technologies: ["React", "Shadcn", "Express", "Prisma"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Movie App",
-    description: "Modern movie catalog application with search, filtering, and detailed information about each film.",
+    description:
+      "Modern movie catalog application with search, filtering, and detailed information about each film.",
     image: "/movie.png",
     url: "https://film-uz.vercel.app/",
     technologies: ["React", "TypeScript", "AntDesign", "Translator"],
   },
   {
-    id: 5,
+    id: 6,
     title: "E-Commerce",
-    description: "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
+    description:
+      "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
     image: "/ecomerce.png",
     url: "https://ecommerce-uz.vercel.app/",
     technologies: ["React", "Redux", "TypeScript", "Tailwind"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Food Landing",
-    description: "Modern landing page for food delivery service with menu, service features, and call-to-action.",
+    description:
+      "Modern landing page for food delivery service with menu, service features, and call-to-action.",
     image: "/food.png",
     url: "https://food-uz.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Interview questions",
-    description: "Platform for interview preparation with curated professional questions and answers.",
+    description:
+      "Platform for interview preparation with curated professional questions and answers.",
     image: "/stackbek.png",
     url: "https://stackbek.vercel.app/",
     technologies: ["Next", "React", "TypeScript", "Tailwind"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Mini marketplace",
-    description: "Small marketplace built using ready-made API to demonstrate functionality and features.",
+    description:
+      "Small marketplace built using ready-made API to demonstrate functionality and features.",
     image: "/marketplace.png",
     url: "https://marketplace-uz.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Landing page",
-    description: "Professional landing page for a Japanese company with service information and contact details.",
+    description:
+      "Professional landing page for a Japanese company with service information and contact details.",
     image: "/langdingUravo.png",
     url: "https://uravo-net.vercel.app/",
     technologies: ["HTML", "SCSS", "JavaScript"],

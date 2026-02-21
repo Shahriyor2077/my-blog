@@ -390,7 +390,7 @@ const LandingPage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group border border-neutral-800 hover:border-neutral-700 transition-colors"
+                                className="group border border-neutral-800 hover:border-neutral-700 transition-colors flex flex-col"
                             >
                                 <div className="w-full h-80 bg-neutral-900 overflow-hidden">
                                     {p.image ? (
@@ -405,31 +405,33 @@ const LandingPage = () => {
                                         </div>
                                     )}
                                 </div>
-                                <div className="p-6">
+                                <div className="p-6 flex flex-col flex-1">
                                     <h3 className="text-lg font-semibold text-white mb-2">{p.title}</h3>
                                     <p className="text-neutral-400 text-sm line-clamp-2 mb-4">{p.description}</p>
-                                    {p.technologies && p.technologies.length > 0 && (
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {p.technologies.slice(0, 3).map((tech, idx) => (
-                                                <span key={idx} className="px-2 py-1 text-xs border border-neutral-700 text-neutral-400">
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    )}
-                                    <div className="flex gap-4">
-                                        {p.url && (
-                                            <a
-                                                href={p.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label={`View ${p.title} live`}
-                                                className="text-emerald-500 text-sm hover:text-emerald-400 flex items-center gap-1"
-                                            >
-                                                <ExternalLink size={14} />
-                                                Live
-                                            </a>
+                                    <div className="mt-auto">
+                                        {p.technologies && p.technologies.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mb-4">
+                                                {p.technologies.slice(0, 3).map((tech, idx) => (
+                                                    <span key={idx} className="px-2 py-1 text-xs border border-neutral-700 text-neutral-400">
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         )}
+                                        <div className="flex gap-4">
+                                            {p.url && (
+                                                <a
+                                                    href={p.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    aria-label={`View ${p.title} live`}
+                                                    className="text-emerald-500 text-sm hover:text-emerald-400 flex items-center gap-1"
+                                                >
+                                                    <ExternalLink size={14} />
+                                                    Live
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
