@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "zaripovshahriyor91@gmail.com",
   avatar: "/avatar.jpg", // You can add your photo later
   bio: "Passionate fullstack developer with expertise in modern web technologies. I create beautiful, functional, and user-friendly applications with a focus on clean code and exceptional user experience.",
-  resume: "/zaripov_shahriyor_resume.pdf", // You can add your resume PDF later
+  resume: "/shahriyor_zaripov_resume.pdf",
 };
 
 export const socialLinks = [
@@ -211,6 +211,14 @@ export const awards = [
 export const projects = [
   {
     id: 1,
+    title: "Otbozor.uz",
+    description: "The only online platform for horse trading",
+    image: "/otbozor.png",
+    url: "https://otbozor.uz/",
+    technologies: ["NestJs", "Next.js", "Typescript"],
+  },
+  {
+    id: 2,
     title: "Webgrade.uz",
     description: "Landing page for Webgrade IT company",
     image: "/webgrade.png",
@@ -218,7 +226,7 @@ export const projects = [
     technologies: ["React", "Typescript", "Tailwind", "Shadcn"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Ayoqsh web",
     description:
       "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
@@ -227,7 +235,7 @@ export const projects = [
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Clinic site",
     description:
       "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
@@ -236,7 +244,7 @@ export const projects = [
     technologies: ["Express", "JavaScript", "MongoDB", "Handlebars"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Debt web",
     description:
       "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
@@ -245,7 +253,7 @@ export const projects = [
     technologies: ["React", "Shadcn", "Express", "Prisma"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Movie App",
     description:
       "Modern movie catalog application with search, filtering, and detailed information about each film.",
@@ -254,7 +262,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "AntDesign", "Translator"],
   },
   {
-    id: 6,
+    id: 7,
     title: "E-Commerce",
     description:
       "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
@@ -263,7 +271,7 @@ export const projects = [
     technologies: ["React", "Redux", "TypeScript", "Tailwind"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Food Landing",
     description:
       "Modern landing page for food delivery service with menu, service features, and call-to-action.",
@@ -272,7 +280,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Interview questions",
     description:
       "Platform for interview preparation with curated professional questions and answers.",
@@ -281,7 +289,7 @@ export const projects = [
     technologies: ["Next", "React", "TypeScript", "Tailwind"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Mini marketplace",
     description:
       "Small marketplace built using ready-made API to demonstrate functionality and features.",
@@ -290,7 +298,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 10,
+    id: 11,
     title: "Landing page",
     description:
       "Professional landing page for a Japanese company with service information and contact details.",
