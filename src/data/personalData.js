@@ -206,7 +206,6 @@ export const awards = [
     issuer: "Najot Ta'lim",
   },
 ];
-
 // Projects
 export const projects = [
   {
