@@ -253,6 +253,42 @@ export const projects = [
   },
   {
     id: 6,
+    title: "Xorazmbeton.uz",
+    description:
+      "Corporate website for Xorazm Beton construction materials company with product catalog and company information.",
+    image: "/xorazmbeton.png",
+    url: "https://xorazmbeton.uz/",
+    technologies: ["React", "TypeScript", "Tailwind"],
+  },
+  {
+    id: 7,
+    title: "Parvoz Academy",
+    description:
+      "Landing page for Parvoz Academy online course center, showcasing available courses and center information.",
+    image: "/parvozacademy.png",
+    url: "https://parvoz-academy.vercel.app/",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    id: 8,
+    title: "Smart Clinic",
+    description:
+      "Website for Smart Clinic presenting the clinic's services, specializations, and contact information.",
+    image: "/smartclinic.png",
+    url: "https://smart-clinic-lilac.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind"],
+  },
+  {
+    id: 9,
+    title: "Milliy Jamoasi",
+    description:
+      "Landing page that redirects users to a Telegram bot for voting on OpenBudget public initiative projects.",
+    image: "/milliyjamoasi.png",
+    url: "https://www.milliyjamoasi.uz/",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    id: 10,
     title: "Movie App",
     description:
       "Modern movie catalog application with search, filtering, and detailed information about each film.",
@@ -261,7 +297,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "AntDesign", "Translator"],
   },
   {
-    id: 7,
+    id: 11,
     title: "E-Commerce",
     description:
       "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
@@ -270,7 +306,7 @@ export const projects = [
     technologies: ["React", "Redux", "TypeScript", "Tailwind"],
   },
   {
-    id: 8,
+    id: 12,
     title: "Food Landing",
     description:
       "Modern landing page for food delivery service with menu, service features, and call-to-action.",
@@ -279,7 +315,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 9,
+    id: 13,
     title: "Interview questions",
     description:
       "Platform for interview preparation with curated professional questions and answers.",
@@ -288,7 +324,7 @@ export const projects = [
     technologies: ["Next", "React", "TypeScript", "Tailwind"],
   },
   {
-    id: 10,
+    id: 14,
     title: "Mini marketplace",
     description:
       "Small marketplace built using ready-made API to demonstrate functionality and features.",
@@ -297,7 +333,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 11,
+    id: 15,
     title: "Landing page",
     description:
       "Professional landing page for a Japanese company with service information and contact details.",
