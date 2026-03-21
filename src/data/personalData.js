@@ -166,8 +166,8 @@ export const education = [
     id: 3,
     institution: "Cambridge",
     program: "English Language Course",
-    duration: "2025-2026",
-    status: "Completed",
+    duration: "2025 - Present",
+    status: "In Progress",
     description:
       "Advanced English language program with focus on professional communication and academic writing",
     skills: [
