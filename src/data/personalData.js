@@ -218,6 +218,15 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Dokonect.uz",
+    description:
+      "Platform connecting store owners and distributors for seamless B2B product sourcing and distribution management.",
+    image: "/dokonect.png",
+    url: "https://dokonect.uz/",
+    technologies: ["React", "TypeScript", "Tailwind", "NestJS"],
+  },
+  {
+    id: 3,
     title: "Webgrade.uz",
     description: "Landing page for Webgrade IT company",
     image: "/webgrade.png",
@@ -225,7 +234,7 @@ export const projects = [
     technologies: ["React", "Typescript", "Tailwind", "Shadcn"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Ayoqsh web",
     description:
       "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
@@ -234,7 +243,7 @@ export const projects = [
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Clinic site",
     description:
       "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
@@ -243,7 +252,7 @@ export const projects = [
     technologies: ["Express", "JavaScript", "MongoDB", "Handlebars"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Debt web",
     description:
       "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
@@ -252,7 +261,7 @@ export const projects = [
     technologies: ["React", "Shadcn", "Express", "Prisma"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Xorazmbeton.uz",
     description:
       "Corporate website for Xorazm Beton construction materials company with product catalog and company information.",
@@ -261,7 +270,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "Tailwind"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Parvoz Academy",
     description:
       "Landing page for Parvoz Academy online course center, showcasing available courses and center information.",
@@ -270,7 +279,7 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Smart Clinic",
     description:
       "Website for Smart Clinic presenting the clinic's services, specializations, and contact information.",
@@ -279,7 +288,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "Tailwind"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Milliy Jamoasi",
     description:
       "Landing page that redirects users to a Telegram bot for voting on OpenBudget public initiative projects.",
@@ -288,7 +297,7 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
-    id: 10,
+    id: 11,
     title: "Movie App",
     description:
       "Modern movie catalog application with search, filtering, and detailed information about each film.",
@@ -297,7 +306,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "AntDesign", "Translator"],
   },
   {
-    id: 11,
+    id: 12,
     title: "E-Commerce",
     description:
       "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
@@ -306,7 +315,7 @@ export const projects = [
     technologies: ["React", "Redux", "TypeScript", "Tailwind"],
   },
   {
-    id: 12,
+    id: 13,
     title: "Food Landing",
     description:
       "Modern landing page for food delivery service with menu, service features, and call-to-action.",
@@ -315,7 +324,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 13,
+    id: 14,
     title: "Interview questions",
     description:
       "Platform for interview preparation with curated professional questions and answers.",
@@ -324,7 +333,7 @@ export const projects = [
     technologies: ["Next", "React", "TypeScript", "Tailwind"],
   },
   {
-    id: 14,
+    id: 15,
     title: "Mini marketplace",
     description:
       "Small marketplace built using ready-made API to demonstrate functionality and features.",
@@ -333,7 +342,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 15,
+    id: 16,
     title: "Landing page",
     description:
       "Professional landing page for a Japanese company with service information and contact details.",
