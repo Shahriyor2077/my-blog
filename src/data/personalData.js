@@ -72,6 +72,11 @@ export const skills = {
         { name: "Tailwind CSS" },
         { name: "Ant Design" },
         { name: "Shadcn" },
+        { name: "Material UI" },
+        { name: "Bootstrap" },
+        { name: "Zustand" },
+        { name: "TanStack Query" },
+        { name: "Redux" },
       ],
     },
     {
@@ -151,7 +156,7 @@ export const education = [
     id: 2,
     institution: "Najot Ta'lim",
     program: "Bootcamp Fullstack",
-    duration: "2025-2026",
+    duration: "2025-2025",
     status: "In Progress",
     description:
       "Intensive web development program focusing on full-stack development with modern technologies",
@@ -210,14 +215,6 @@ export const awards = [
 export const projects = [
   {
     id: 1,
-    title: "Otbozor.uz",
-    description: "The only online platform for horse trading",
-    image: "/otbozor.png",
-    url: "https://otbozor.uz/",
-    technologies: ["NestJs", "Next.js", "Typescript"],
-  },
-  {
-    id: 2,
     title: "Dokonect.uz",
     description:
       "Platform connecting store owners and distributors for seamless B2B product sourcing and distribution management.",
@@ -226,7 +223,24 @@ export const projects = [
     technologies: ["React", "TypeScript", "Tailwind", "NestJS"],
   },
   {
+    id: 2,
+    title: "Parvoz Academy",
+    description:
+      "Landing page for Parvoz Academy online course center, showcasing available courses and center information.",
+    image: "/parvozacademy.png",
+    url: "https://parvoz-academy.uz/",
+    technologies: ["Next.js", "TypeScript", "Tailwind"],
+  },
+  {
     id: 3,
+    title: "Otbozor.uz",
+    description: "The only online platform for horse trading",
+    image: "/otbozor.png",
+    url: "https://otbozor.uz/",
+    technologies: ["NestJs", "Next.js", "Typescript"],
+  },
+  {
+    id: 4,
     title: "Webgrade.uz",
     description: "Landing page for Webgrade IT company",
     image: "/webgrade.png",
@@ -234,7 +248,7 @@ export const projects = [
     technologies: ["React", "Typescript", "Tailwind", "Shadcn"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Ayoqsh web",
     description:
       "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
@@ -243,7 +257,7 @@ export const projects = [
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Clinic site",
     description:
       "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
@@ -252,7 +266,7 @@ export const projects = [
     technologies: ["Express", "JavaScript", "MongoDB", "Handlebars"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Debt web",
     description:
       "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
@@ -261,22 +275,13 @@ export const projects = [
     technologies: ["React", "Shadcn", "Express", "Prisma"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Xorazmbeton.uz",
     description:
       "Corporate website for Xorazm Beton construction materials company with product catalog and company information.",
     image: "/xorazmbeton.png",
     url: "https://xorazmbeton.uz/",
     technologies: ["React", "TypeScript", "Tailwind"],
-  },
-  {
-    id: 8,
-    title: "Parvoz Academy",
-    description:
-      "Landing page for Parvoz Academy online course center, showcasing available courses and center information.",
-    image: "/parvozacademy.png",
-    url: "https://parvoz-academy.vercel.app/",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
     id: 9,
