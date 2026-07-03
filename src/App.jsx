@@ -16,12 +16,19 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Support deep links like /#portfolio once content is mounted
+  useEffect(() => {
+    if (loading) return;
+    const id = window.location.hash.slice(1);
+    if (id) document.getElementById(id)?.scrollIntoView({ behavior: "instant" });
+  }, [loading]);
+
   if (loading) return <LoadingSpinner />;
 
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <div className="min-h-screen bg-black text-white">
+        <div className="min-h-screen bg-[#030303] text-white">
           <Navbar />
           <main>
             <LandingPage />
