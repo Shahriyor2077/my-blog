@@ -289,7 +289,7 @@ export const projects = [
     description:
       "Website for Smart Clinic presenting the clinic's services, specializations, and contact information.",
     image: "/smartclinic.png",
-    url: "https://smart-clinic-lilac.vercel.app/",
+    url: "https://smartclinic.uz/",
     technologies: ["React", "TypeScript", "Tailwind"],
   },
   {
