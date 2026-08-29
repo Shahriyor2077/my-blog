@@ -319,7 +319,7 @@ const LandingPage = () => {
                         {[
                             { value: `${projects.length}+`, label: "Projects Completed" },
                             { value: `${allTech.length}+`, label: "Technologies" },
-                            { value: "6+", label: "Months Experience" },
+                            { value: "1+", label: "Years Experience" },
                         ].map((s, i) => (
                             <motion.div
                                 key={s.label}
