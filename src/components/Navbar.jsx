@@ -1,142 +1,180 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { Menu, X, ArrowUpRight } from "lucide-react";
+import { socialLinks } from "../data/personalData";
 
 const links = [
-  { id: "home", label: "Home" },
+  { id: "portfolio", label: "Work" },
+  { id: "services", label: "Services" },
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
-  { id: "portfolio", label: "Portfolio" },
   { id: "contact", label: "Contact" },
 ];
+
+const ease = [0.22, 1, 0.36, 1];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [active, setActive] = useState("");
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, mass: 0.3 });
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 24);
 
-      for (let i = links.length - 1; i >= 0; i--) {
-        const el = document.getElementById(links[i].id);
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActiveSection(links[i].id);
-          break;
-        }
+      let current = "";
+      for (const l of links) {
+        const el = document.getElementById(l.id);
+        if (el && el.getBoundingClientRect().top <= 140) current = l.id;
       }
+      setActive(current);
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock page scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-      setActiveSection(id);
-    }
+    document.body.style.overflow = "";
+    setIsOpen(false);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToTop = () => {
+    document.body.style.overflow = "";
+    setIsOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/70 backdrop-blur-xl border-b border-white/6"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="flex items-center gap-2 text-lg font-bold text-white group"
-          >
-            <span className="w-8 h-8 rounded-lg bg-linear-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-black text-sm font-black group-hover:rotate-6 transition-transform">
-              S
+    <>
+      <motion.div
+        style={{ scaleX: progress }}
+        className="fixed inset-x-0 top-0 z-60 h-0.5 origin-left bg-acid"
+      />
+
+      <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+        <nav
+          className={`mx-auto flex max-w-6xl items-center justify-between rounded-full border py-2 pl-2 pr-2 transition-all duration-500 ${
+            scrolled || isOpen
+              ? "border-white/10 bg-ink/75 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.8)] backdrop-blur-xl"
+              : "border-transparent bg-transparent"
+          }`}
+        >
+          <button onClick={scrollToTop} className="group flex items-center gap-2.5" aria-label="Back to top">
+            <span className="grid size-9 place-items-center rounded-full bg-acid font-display text-sm font-bold text-ink transition-transform duration-700 group-hover:rotate-360">
+              SZ
             </span>
-            Shahriyor
-            <span className="text-emerald-400">.</span>
+            <span className="font-display text-[15px] font-semibold tracking-tight">
+              Shahriyor<span className="text-acid">.</span>
+            </span>
           </button>
 
-          <div className="hidden md:flex items-center gap-1 p-1 rounded-full glass">
+          <div className="hidden items-center md:flex">
             {links.map((l) => (
               <button
                 key={l.id}
                 onClick={() => scrollToSection(l.id)}
-                className={`relative px-4 py-1.5 text-sm rounded-full transition-colors ${
-                  activeSection === l.id
-                    ? "text-black font-medium"
-                    : "text-neutral-400 hover:text-white"
+                className={`relative px-4 py-2 text-sm transition-colors ${
+                  active === l.id ? "text-bone" : "text-mute hover:text-bone"
                 }`}
               >
-                {activeSection === l.id && (
+                {active === l.id && (
                   <motion.span
-                    layoutId="nav-pill"
-                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
-                    className="absolute inset-0 rounded-full bg-linear-to-r from-emerald-400 to-teal-400"
+                    layoutId="nav-dot"
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    className="absolute bottom-0.5 left-1/2 size-1 -translate-x-1/2 rounded-full bg-acid"
                   />
                 )}
-                <span className="relative z-10">{l.label}</span>
+                {l.label}
               </button>
             ))}
           </div>
 
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/10 transition-colors"
-          >
-            <Sparkles size={14} />
-            Hire Me
-          </button>
-
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-neutral-400 hover:text-white"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden border-t border-white/6"
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="group hidden items-center gap-2 rounded-full bg-bone px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-acid sm:inline-flex"
             >
-              <div className="py-4 space-y-1">
-                {links.map((l) => (
-                  <button
-                    key={l.id}
-                    onClick={() => scrollToSection(l.id)}
-                    className={`block w-full text-left px-4 py-2.5 text-sm rounded-xl transition-colors ${
-                      activeSection === l.id
-                        ? "text-emerald-400 bg-emerald-500/10 font-medium"
-                        : "text-neutral-400 hover:text-white hover:bg-white/5"
+              Let's talk
+              <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:rotate-45" />
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="grid size-10 place-items-center rounded-full border border-white/10 text-bone md:hidden"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X size={18} /> : <Menu size={18} />}
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 flex flex-col justify-between bg-ink px-6 pb-10 pt-28 md:hidden"
+          >
+            <nav className="flex flex-col">
+              {links.map((l, i) => (
+                <motion.button
+                  key={l.id}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.06 * i + 0.1, ease }}
+                  onClick={() => scrollToSection(l.id)}
+                  className="flex items-baseline gap-4 border-b border-white/8 py-4 text-left"
+                >
+                  <span className="font-mono text-xs text-acid">0{i + 1}</span>
+                  <span
+                    className={`font-display text-4xl font-semibold tracking-tight ${
+                      active === l.id ? "text-acid" : ""
                     }`}
                   >
                     {l.label}
-                  </button>
-                ))}
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="flex items-center gap-2 w-full px-4 py-2.5 text-sm rounded-xl text-emerald-300 border border-emerald-500/30 mt-2"
+                  </span>
+                </motion.button>
+              ))}
+            </nav>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap gap-2"
+            >
+              {socialLinks.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-white/10 px-4 py-2 text-sm text-mute"
                 >
-                  <Sparkles size={14} />
-                  Hire Me
-                </button>
-              </div>
+                  {s.name}
+                </a>
+              ))}
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

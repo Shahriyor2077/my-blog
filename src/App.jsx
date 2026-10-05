@@ -28,7 +28,8 @@ function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <div className="min-h-screen bg-[#030303] text-white">
+        <div className="min-h-screen bg-ink text-bone">
+          <div className="noise" aria-hidden="true" />
           <Navbar />
           <main>
             <LandingPage />

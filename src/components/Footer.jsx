@@ -1,90 +1,96 @@
-import { Github, Linkedin, Mail, Send, MapPin, Phone, MessageCircle, ArrowUp } from "lucide-react";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { personalInfo, socialLinks } from "../data/personalData";
+import { Accent, TashkentTime } from "./ui";
+
+const nav = [
+  { id: "portfolio", label: "Work" },
+  { id: "services", label: "Services" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "process", label: "Process" },
+  { id: "contact", label: "Contact" },
+];
 
 const Footer = () => {
   const year = new Date().getFullYear();
-  const iconMap = { Github, Linkedin, Send, Mail };
+  const scrollToSection = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <footer className="relative border-t border-white/6 overflow-hidden">
-      {/* Top glow line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-linear-to-r from-transparent via-emerald-500/60 to-transparent" />
-
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 rounded-lg bg-linear-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-black text-sm font-black">
-                S
-              </span>
-              <h3 className="text-xl font-bold text-white">
-                {personalInfo.name}
-                <span className="text-emerald-400">.</span>
-              </h3>
-            </div>
-            <p className="text-neutral-500 text-sm mb-5 max-w-sm">
-              Fullstack developer crafting modern, fast and user-friendly web experiences.
+    <footer className="relative overflow-hidden border-t border-white/8">
+      <div className="mx-auto max-w-6xl px-6 pt-20">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="font-display text-3xl font-semibold leading-tight tracking-tight">
+              Let's build something <Accent>worth</Accent> remembering.
             </p>
-
-            <div className="space-y-2 text-sm text-neutral-400">
-              <p className="flex items-center gap-2">
-                <MapPin size={14} className="text-emerald-400" /> {personalInfo.location}
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone size={14} className="text-emerald-400" /> {personalInfo.phone}
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail size={14} className="text-emerald-400" /> {personalInfo.email}
-              </p>
-            </div>
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="group mt-4 inline-flex items-center gap-2 py-2 text-mute transition-colors hover:text-acid"
+            >
+              {personalInfo.email}
+              <ArrowUpRight size={16} className="transition-transform group-hover:rotate-45" />
+            </a>
           </div>
 
-          {/* Social */}
-          <div className="md:text-right">
-            <h4 className="text-sm font-semibold text-white mb-4">Connect</h4>
-            <div className="flex gap-3 md:justify-end">
-              <a
-                href="https://t.me/shahriyorjs"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram Channel"
-                title="Telegram Channel"
-                className="p-2.5 rounded-xl glass text-neutral-400 hover:text-emerald-300 hover:border-emerald-500/40 hover:-translate-y-1 transition-all"
-              >
-                <MessageCircle size={18} />
-              </a>
-              {socialLinks.map((s) => {
-                const Icon = iconMap[s.icon];
-                return (
+          <div className="md:col-span-3 md:col-start-7">
+            <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-dim">Navigation</p>
+            <ul className="space-y-0.5">
+              {nav.map((l) => (
+                <li key={l.id}>
+                  <button
+                    onClick={() => scrollToSection(l.id)}
+                    className="inline-block py-1.5 text-mute transition-colors hover:text-bone"
+                  >
+                    {l.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-3">
+            <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-dim">Socials</p>
+            <ul className="space-y-0.5">
+              {socialLinks.map((s) => (
+                <li key={s.name}>
                   <a
-                    key={s.name}
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={s.name}
-                    className="p-2.5 rounded-xl glass text-neutral-400 hover:text-emerald-300 hover:border-emerald-500/40 hover:-translate-y-1 transition-all"
+                    className="group inline-flex items-center gap-1.5 py-1.5 text-mute transition-colors hover:text-bone"
                   >
-                    <Icon size={18} />
+                    {s.name}
+                    <ArrowUpRight size={14} className="transition-transform group-hover:rotate-45 group-hover:text-acid" />
                   </a>
-                );
-              })}
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <p className="text-sm text-neutral-600">
-            © {year} {personalInfo.name}. All rights reserved.
+      {/* Giant wordmark */}
+      <p
+        aria-hidden="true"
+        className="pointer-events-none mt-16 select-none bg-linear-to-b from-white/14 to-transparent bg-clip-text text-center font-display text-[18vw] font-bold leading-[0.8] tracking-[-0.06em] text-transparent"
+      >
+        Shahriyor
+      </p>
+
+      <div className="border-t border-white/8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6 text-sm text-dim sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {year} {personalInfo.name}. Crafted in Tashkent.
+          </p>
+          <p className="font-mono text-xs">
+            Tashkent · <TashkentTime /> GMT+5
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            aria-label="Back to top"
-            className="p-2.5 rounded-xl glass text-neutral-400 hover:text-emerald-300 hover:border-emerald-500/40 transition-all"
+            className="group inline-flex items-center gap-2 py-2 transition-colors hover:text-bone"
           >
-            <ArrowUp size={16} />
+            Back to top
+            <ArrowUp size={14} className="transition-transform group-hover:-translate-y-0.5" />
           </button>
         </div>
       </div>

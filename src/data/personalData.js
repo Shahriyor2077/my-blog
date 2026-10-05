@@ -215,145 +215,219 @@ export const awards = [
 export const projects = [
   {
     id: 1,
-    title: "Zektifox.com",
+    title: "OneRoom.uz",
     description:
-      "AI sales platform for window & door distributors: 24/7 AI voice agent, lead qualification, calendar booking, CRM and automated follow-ups.",
-    image: "/zektifox.png",
-    url: "https://zektifox.com/",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "AI"],
+      "All-in-one LMS and CRM platform for educational centers: attendance, payments, debt tracking, scheduling, leads and Telegram bot notifications in a single dashboard.",
+    image: "/oneroom.webp",
+    url: "https://oneroom.uz/",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "NestJS"],
   },
   {
     id: 2,
-    title: "Dokonect.uz",
+    title: "Parvozonline.uz",
     description:
-      "Platform connecting store owners and distributors for seamless B2B product sourcing and distribution management.",
-    image: "/dokonect.png",
-    url: "https://dokonect.uz/",
+      "Online learning platform for Parvoz Academy with courses, pricing plans, teachers, online tests and consultation requests in English, Math and IT.",
+    image: "/parvozonline.webp",
+    url: "https://parvozonline.uz/",
     technologies: ["React", "TypeScript", "Tailwind", "NestJS"],
   },
   {
     id: 3,
+    title: "Zektifox.com",
+    description:
+      "AI sales platform for window & door distributors: 24/7 AI voice agent, lead qualification, calendar booking, CRM and automated follow-ups.",
+    image: "/zektifox.webp",
+    url: "https://zektifox.com/",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "AI"],
+  },
+  {
+    id: 4,
+    title: "Dokonect.uz",
+    description:
+      "Platform connecting store owners and distributors for seamless B2B product sourcing and distribution management.",
+    image: "/dokonect.webp",
+    url: "https://dokonect.uz/",
+    technologies: ["React", "TypeScript", "Tailwind", "NestJS"],
+  },
+  {
+    id: 5,
     title: "Otbozor.uz",
     description: "The only online platform for horse trading",
-    image: "/otbozor.png",
+    image: "/otbozor.webp",
     url: "https://otbozor.uz/",
     technologies: ["NestJs", "Next.js", "Typescript"],
   },
   {
-    id: 4,
+    id: 6,
     title: "Webgrade.uz",
     description: "Landing page for Webgrade IT company",
-    image: "/webgrade.png",
+    image: "/webgrade.webp",
     url: "https://www.webgrade.uz/",
     technologies: ["React", "Typescript", "Tailwind", "Shadcn"],
   },
   {
-    id: 5,
+    id: 7,
     title: "Ayoqsh web",
     description:
       "Platform for managing operators and moderators with role-based access control and real-time dashboard.",
-    image: "/ayoqsh.png",
+    image: "/ayoqsh.webp",
     url: "https://www.nbsgazoil.uz/operator",
     technologies: ["React", "NestJS", "Prisma", "Radix"],
   },
   {
-    id: 6,
+    id: 8,
     title: "Clinic site",
     description:
       "Comprehensive clinic management system with secure authentication and separate portals for doctors and administrators.",
-    image: "/klinika.png",
+    image: "/klinika.webp",
     url: "https://orfan.uz/auth/doctor/login",
     technologies: ["Express", "JavaScript", "MongoDB", "Handlebars"],
   },
   {
-    id: 7,
+    id: 9,
     title: "Debt web",
     description:
       "Convenient web service for calculating and managing store debts. Track customer debts and maintain payment records efficiently.",
-    image: "/debt.png",
+    image: "/debt.webp",
     url: "https://debt-market.vercel.app/login",
     technologies: ["React", "Shadcn", "Express", "Prisma"],
   },
   {
-    id: 8,
+    id: 10,
     title: "Xorazmbeton.uz",
     description:
       "Corporate website for Xorazm Beton construction materials company with product catalog and company information.",
-    image: "/xorazmbeton.png",
+    image: "/xorazmbeton.webp",
     url: "https://xorazmbeton.uz/",
     technologies: ["React", "TypeScript", "Tailwind"],
   },
   {
-    id: 9,
+    id: 11,
     title: "Smart Clinic",
     description:
       "Website for Smart Clinic presenting the clinic's services, specializations, and contact information.",
-    image: "/smartclinic.png",
+    image: "/smartclinic.webp",
     url: "https://smartclinic.uz/",
     technologies: ["React", "TypeScript", "Tailwind"],
   },
   {
-    id: 10,
+    id: 12,
     title: "Milliy Jamoasi",
     description:
       "Landing page that redirects users to a Telegram bot for voting on OpenBudget public initiative projects.",
-    image: "/milliyjamoasi.png",
+    image: "/milliyjamoasi.webp",
     url: "https://www.milliyjamoasi.uz/",
     technologies: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
-    id: 11,
+    id: 13,
     title: "Movie App",
     description:
       "Modern movie catalog application with search, filtering, and detailed information about each film.",
-    image: "/movie.png",
+    image: "/movie.webp",
     url: "https://film-uz.vercel.app/",
     technologies: ["React", "TypeScript", "AntDesign", "Translator"],
   },
   {
-    id: 12,
+    id: 14,
     title: "E-Commerce",
     description:
       "Full-featured e-commerce store with product catalog, shopping cart, and complete checkout process.",
-    image: "/ecomerce.png",
+    image: "/ecomerce.webp",
     url: "https://ecommerce-uz.vercel.app/",
     technologies: ["React", "Redux", "TypeScript", "Tailwind"],
   },
   {
-    id: 13,
+    id: 15,
     title: "Food Landing",
     description:
       "Modern landing page for food delivery service with menu, service features, and call-to-action.",
-    image: "/food.png",
+    image: "/food.webp",
     url: "https://food-uz.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 14,
+    id: 16,
     title: "Interview questions",
     description:
       "Platform for interview preparation with curated professional questions and answers.",
-    image: "/stackbek.png",
+    image: "/stackbek.webp",
     url: "https://stackbek.vercel.app/",
     technologies: ["Next", "React", "TypeScript", "Tailwind"],
   },
   {
-    id: 15,
+    id: 17,
     title: "Mini marketplace",
     description:
       "Small marketplace built using ready-made API to demonstrate functionality and features.",
-    image: "/marketplace.png",
+    image: "/marketplace.webp",
     url: "https://marketplace-uz.vercel.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: 16,
+    id: 18,
     title: "Landing page",
     description:
       "Professional landing page for a Japanese company with service information and contact details.",
-    image: "/langdingUravo.png",
+    image: "/langdingUravo.webp",
     url: "https://uravo-net.vercel.app/",
     technologies: ["HTML", "SCSS", "JavaScript"],
+  },
+];
+
+// Services
+export const services = [
+  {
+    id: 1,
+    title: "Web Applications",
+    description:
+      "Dashboards, CRMs, marketplaces and SaaS platforms with clean architecture, role-based access and real-time data.",
+    points: ["React & Next.js", "Admin panels & dashboards", "Auth & role-based access"],
+    icon: "AppWindow",
+  },
+  {
+    id: 2,
+    title: "Landing Pages",
+    description:
+      "Fast, conversion-focused landing pages that look sharp on every screen and make a strong first impression.",
+    points: ["Pixel-perfect & responsive", "SEO & performance", "Smooth, premium animations"],
+    icon: "Rocket",
+  },
+  {
+    id: 3,
+    title: "Backend & APIs",
+    description:
+      "Reliable REST and GraphQL APIs with NestJS or Express, solid databases and integrations like Telegram bots.",
+    points: ["NestJS & Express", "PostgreSQL, MongoDB & Prisma", "Telegram bots & integrations"],
+    icon: "Server",
+  },
+];
+
+// Work process
+export const processSteps = [
+  {
+    id: 1,
+    title: "Discover",
+    description:
+      "We talk through your goals, users and scope, and I turn them into a clear plan with timeline and cost.",
+  },
+  {
+    id: 2,
+    title: "Design",
+    description:
+      "Structure, user flows and UI direction — agreed with you before any production code is written.",
+  },
+  {
+    id: 3,
+    title: "Develop",
+    description:
+      "Iterative builds with regular demos, so you see real progress every few days, not only at the end.",
+  },
+  {
+    id: 4,
+    title: "Launch & Support",
+    description:
+      "Deployment, domain, analytics and SEO setup — plus support after launch so everything keeps running.",
   },
 ];
 
