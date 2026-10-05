@@ -215,21 +215,21 @@ export const awards = [
 export const projects = [
   {
     id: 1,
+    title: "Zektifox.com",
+    description:
+      "AI sales platform for window & door distributors: 24/7 AI voice agent, lead qualification, calendar booking, CRM and automated follow-ups.",
+    image: "/zektifox.png",
+    url: "https://zektifox.com/",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "AI"],
+  },
+  {
+    id: 2,
     title: "Dokonect.uz",
     description:
       "Platform connecting store owners and distributors for seamless B2B product sourcing and distribution management.",
     image: "/dokonect.png",
     url: "https://dokonect.uz/",
     technologies: ["React", "TypeScript", "Tailwind", "NestJS"],
-  },
-  {
-    id: 2,
-    title: "Parvoz Academy",
-    description:
-      "Landing page for Parvoz Academy online course center, showcasing available courses and center information.",
-    image: "/parvozacademy.png",
-    url: "https://parvoz-academy.uz/",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
     id: 3,
